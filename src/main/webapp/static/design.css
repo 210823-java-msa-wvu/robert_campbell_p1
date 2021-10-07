@@ -1,0 +1,28 @@
+div{
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+body {background-color: #03fcf4;}
+
+div.login {border-style: solid;
+    border-width: 2px;
+    border-color: green;
+}
+
+input[type=submit]:hover {
+    color: coral;
+}
+
+h1 {
+    color: purple;
+    font-weight: bold;
+    border-bottom: 2px solid pink;
+    
+}
+
+label.form-control {
+    color: orange;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;;
+}

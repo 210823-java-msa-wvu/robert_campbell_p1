@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="document.ApplicationForm.reset();">
+    <h1>Fill out the folloing form to apply for Reimbursement.</h1>
+    All fields are Required.
+    <br><br>
+
+    <div class="applications-container">
+        <form name="ApplicationForm" method="POST">
+            
+            <label for="eventdate">Event Date:
+                <input id="eventdate" type="date" name="eventdate" required>
+            </label>
+            <br><br>
+            <label for="eventlocation">Event  State and City Location:
+                <input id="eventlocation" type="text" name="eventlocation" placeholder="State, City" required> 
+            </label>
+            <br><br>
+            <label for="eventdescription">Select the type of event:<br>
+                <input id="eventdescription" type="radio" name="eventdescription" value="Certification" required>Certification<br>
+                <input id="eventdescription" type="radio" name="eventdescription" value="Technical Training" required>Technical Training<br>
+                <input id="eventdescription" type="radio" name="eventdescription" value="University Course" required>University Course<br>
+                <input id="eventdescription" type="radio" name="eventdescription" value="Certification Prep Class" required>Certification Prep Class<br>
+                <input id="eventdescription" type="radio" name="eventdescription" value="Seminar" required>Seminar<br>
+                <input id="eventdescription" type="radio" name="eventdescription" value="Other" required>Other<br>
+            </label>
+            <br><br>
+            <label for="cost">Enter the cost: $
+                <input id="cost" type="number" placeholder="500.00" step="0.01" min="0.00" required>
+            </label>
+            <br><br>
+            <label for="graderequirement">Select the grading requirement for passing:<br>
+                Leave C as default if you do not have a grade.<br>
+                <input id="graderequirement" type="radio" name="graderequirement" value="A" required>A<br>
+                <input id="graderequirement" type="radio" name="graderequirement" value="B" required>B<br>
+                <input id="graderequirement" type="radio" name="graderequirement" value="C" checked required>C<br>
+                <input id="graderequirement" type="radio" name="graderequirement" value="Presentation" required>Presentation<br>
+            </label>
+            <br><br>
+            <label for="justification">Work Justification:<br>
+                <textarea id="justification" name="justification" rows="6" cols="50" placeholder="Enter work related Justification" required></textarea>
+            </label>
+            <br>
+            <input type="submit" class="applybtn" onclick="apply()" value="Apply">
+            <script src="js/apply.js"></script>
+        </form>
+
+        
+    </div>
+
+    
+
+
+</body>
+</html>
