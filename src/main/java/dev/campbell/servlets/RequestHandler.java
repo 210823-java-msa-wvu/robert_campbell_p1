@@ -19,6 +19,7 @@ public class RequestHandler {
         controllerMap = new HashMap<String, FrontController>();
 
         controllerMap.put("emplogin", new LoginController());
+        controllerMap.put("suplogin", new LoginController());
 
     }
 

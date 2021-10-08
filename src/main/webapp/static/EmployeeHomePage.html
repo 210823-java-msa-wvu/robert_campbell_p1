@@ -8,21 +8,33 @@
 </head>
 <body>
     <h1>Employee Home Page</h1>
+
     
     <div class="employee-menu">
-        <form action="EmployeeProfile" method="GET">
             <label for="view-profile">View Your profile.
                 <input type="submit" class="employeeprofilebtn" onclick="empprof()" value="Get Profile">
             </label>
+            <div>
+                <section id="firstname"></section>
+                <section id="lastname"></section>
+                <section id="username"></section>
+                <section id="reimbursement"></section>
+                <section id="email"></section>
+            </div>
             <br><br>
             <label for="apply" method="GET">Apply for Reimbursement.
-                <input type="submit" class="applybtn" onclick="applyform()" value="Apply">
+                <button onclick="document.location='ApplicationForm.html'">Apply</button>
             </label>
             <br><br>
             <label for="view-applications" method="GET">View your current/past applications.
                 <input type="submit" class="viewappsbtn" onclick="viewapps()" value="View applications">
             </label>
-        </form>
+            <br>
+            <button onclick="document.location='index.html'">logout</button>
+            
     </div>
+
+    <script src="js/empprof.js"></script>
+
 </body>
 </html>

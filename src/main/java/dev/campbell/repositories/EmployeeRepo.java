@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class EmployeeRepo implements CrudInterface<Employee>{
 
-    ConnectionUtil cu =ConnectionUtil.getConnectionUtil();
+    ConnectionUtil cu = ConnectionUtil.getConnectionUtil();
 
     @Override
     public Employee add(Employee employee) {

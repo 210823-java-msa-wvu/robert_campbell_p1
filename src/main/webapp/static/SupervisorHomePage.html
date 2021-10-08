@@ -10,23 +10,25 @@
     <h1>Supervisor Home Page</h1>
     
     <div class="supervisor-menu">
-        <form action="superProfile" method="GET">
             <label for="view-profile">View Your profile.
                 <input type="submit" class="supervisorprofilebtn" onclick="supprof()" value="Get Profile">
             </label>
-            <br><br>
-            <label for="apply" method="GET">Apply for Reimbursement.
-                <input type="submit" class="applybtn" onclick="applyform()" value="Apply">
-            </label>
-            <br><br>
-            <label for="view-applications" method="GET">View your current/past applications.
-                <input type="submit" class="viewappsbtn" onclick="viewapps()" value="View applications">
-            </label>
+            <div>
+                <section id="firstname"></section>
+                <section id="lastname"></section>
+                <section id="username"></section>
+                <section id="position"></section>
+                <section id="email"></section>
+            </div>
             <br><br>
             <label for="manage-applications" method="GET">Manage pending applications.
                 <input type="submit" class="manappsbtn" onclick="manapps()" value="Manage applications">
             </label>
-        </form>
+            <br>
+            <button onclick="document.location='index.html'">logout</button>
     </div>
+
+
+    <script src="js/supprof.js"></script>
 </body>
 </html>

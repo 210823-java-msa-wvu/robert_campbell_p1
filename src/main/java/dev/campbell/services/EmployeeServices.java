@@ -13,7 +13,7 @@ public class EmployeeServices {
 
         if (e != null){
             if (username.equals(e.getUsername()) && password.equals(e.getPassword())){
-                System.out.println(e);
+                System.out.println("E: " + e);
                 System.out.println("logged in");
                 return e;
             }

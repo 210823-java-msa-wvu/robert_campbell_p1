@@ -6,7 +6,8 @@ async function emplogin(){
 
     let user = {
         username: document.getElementById('employee_username').value,
-        password: document.getElementById('employee_password').value
+        password: document.getElementById('employee_password').value,
+        position: "employee"
     }
 
     console.log(user);
@@ -24,10 +25,11 @@ async function emplogin(){
     .then(userData => {
         console.log("mine turtle");
         console.log(userData);
-        
+        document.cookie = JSON.stringify(userData);
         let x = document.cookie;
-        console.log("x= " + x);
-        //window.location.assign("/project1/static/EmployeeHomePage.html");
+        console.log(x);
+        document.cookie.assign
+        window.location.assign("/project1/static/EmployeeHomePage.html");
     })
     .catch(error => {
         console.log("hello from error")

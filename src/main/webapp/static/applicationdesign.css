@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+    font-weight: bold;
+    border-bottom: 2px solid navy;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    
+}
+
+body {
+    background-color: #93E9BE;
+}
+
+label {
+    text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+}
+
+p {
+    color: pink;
+    font-style: italic;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+input[type=submit]:hover {
+    color: yellow;
+}
