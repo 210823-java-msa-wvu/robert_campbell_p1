@@ -1,6 +1,8 @@
 package dev.campbell.models;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Reimbursement {
@@ -14,10 +16,10 @@ public class Reimbursement {
     private Date applyDate;
     private String location;
     private String description;
-    private BigInteger cost;
+    private BigDecimal cost;
     private int gradeRequirement;
     private String workJustification;
-    private int reimbursementProject;
+    private BigDecimal reimbursementProject;
     private boolean dsapproval = false;
     private boolean dsreject = false;
     private String dscomment;
@@ -39,7 +41,7 @@ public class Reimbursement {
     public Reimbursement() {
     }
 
-    public Reimbursement(int id, int empId, String empFirstName, String empLastName, Date eventDate, Date applyDate, String location, String description, BigInteger cost, int gradeRequirement, String workJustification, int reimbursementProject, boolean dsapproval, boolean dsreject, String dscomment, boolean dhapproval, boolean dhreject, String dhcomment, boolean bcapproval, boolean bcreject, String bccomment, boolean urgent, int dsid, boolean approved, boolean denied, boolean payed, boolean rejected) {
+    public Reimbursement(int id, int empId, String empFirstName, String empLastName, Date eventDate, Date applyDate, String location, String description, BigDecimal cost, int gradeRequirement, String workJustification, BigDecimal reimbursementProject, boolean dsapproval, boolean dsreject, String dscomment, boolean dhapproval, boolean dhreject, String dhcomment, boolean bcapproval, boolean bcreject, String bccomment, boolean urgent, int dsid, boolean approved, boolean denied, boolean payed, boolean rejected) {
         this.id = id;
         this.empId = empId;
         this.empFirstName = empFirstName;
@@ -69,7 +71,7 @@ public class Reimbursement {
         this.rejected = rejected;
     }
 
-    public Reimbursement(int id, int empId, String empFirstName, String empLastName, Date eventDate, Date applyDate, String location, String description, BigInteger cost, int gradeRequirement, String workJustification, int reimbursementProject, boolean dsapproval, boolean dsreject, String dscomment, boolean dhapproval, boolean dhreject, String dhcomment, boolean bcapproval, boolean bcreject, String bccomment, boolean urgent, int dsid, boolean approved, boolean denied, boolean payed, boolean rejected, boolean passed, boolean failed) {
+    public Reimbursement(int id, int empId, String empFirstName, String empLastName, Date eventDate, Date applyDate, String location, String description, BigDecimal cost, int gradeRequirement, String workJustification, BigDecimal reimbursementProject, boolean dsapproval, boolean dsreject, String dscomment, boolean dhapproval, boolean dhreject, String dhcomment, boolean bcapproval, boolean bcreject, String bccomment, boolean urgent, int dsid, boolean approved, boolean denied, boolean payed, boolean rejected, boolean passed, boolean failed) {
         this.id = id;
         this.empId = empId;
         this.empFirstName = empFirstName;
@@ -165,11 +167,11 @@ public class Reimbursement {
         this.description = description;
     }
 
-    public BigInteger getCost() {
+    public BigDecimal getCost() {
         return cost;
     }
 
-    public void setCost(BigInteger cost) {
+    public void setCost(BigDecimal cost) {
         this.cost = cost;
     }
 
@@ -189,11 +191,11 @@ public class Reimbursement {
         this.workJustification = workJustification;
     }
 
-    public int getReimbursementProject() {
+    public BigDecimal getReimbursementProject() {
         return reimbursementProject;
     }
 
-    public void setReimbursementProject(int reimbursementProject) {
+    public void setReimbursementProject(BigDecimal reimbursementProject) {
         this.reimbursementProject = reimbursementProject;
     }
 

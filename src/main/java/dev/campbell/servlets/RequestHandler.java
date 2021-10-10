@@ -1,5 +1,6 @@
 package dev.campbell.servlets;
 
+import dev.campbell.controllers.ApplicationController;
 import dev.campbell.controllers.FrontController;
 import dev.campbell.controllers.LoginController;
 
@@ -20,6 +21,7 @@ public class RequestHandler {
 
         controllerMap.put("emplogin", new LoginController());
         controllerMap.put("suplogin", new LoginController());
+        controllerMap.put("apply", new ApplicationController());
 
     }
 
