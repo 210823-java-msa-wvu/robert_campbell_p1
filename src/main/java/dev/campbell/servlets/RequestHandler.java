@@ -22,6 +22,13 @@ public class RequestHandler {
         controllerMap.put("emplogin", new LoginController());
         controllerMap.put("suplogin", new LoginController());
         controllerMap.put("apply", new ApplicationController());
+        controllerMap.put("empquery", new ApplicationController());
+        controllerMap.put("bencoquery", new ApplicationController());
+        controllerMap.put("deptheadquery", new ApplicationController());
+        controllerMap.put("directsuperquery", new ApplicationController());
+        controllerMap.put("bencoupdate", new ApplicationController());
+        controllerMap.put("deptheadupdate", new ApplicationController());
+        controllerMap.put("directsuperupdate", new ApplicationController());
 
     }
 

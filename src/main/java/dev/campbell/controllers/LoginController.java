@@ -22,6 +22,8 @@ public class LoginController implements FrontController{
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
+        //String uri = request.getRequestURI();
+        //System.out.println("login uri: " + uri);
         User u= om.readValue(request.getReader(), User.class);
         System.out.println("readvalue " + u);
 

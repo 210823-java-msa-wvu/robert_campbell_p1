@@ -24,7 +24,7 @@ public class EmployeeRepo implements CrudInterface<Employee>{
 
             System.out.println("Hello From EmployeeRepo get by id");
 
-            String sql = "select * from employees where id = ?";
+            String sql = "select * from employees where id = ?;";
 
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
@@ -96,12 +96,13 @@ public class EmployeeRepo implements CrudInterface<Employee>{
 
             System.out.println("Hello from employeeRepo update");
 
-            String sql = "update employees set reimbursement value ? where id = ?";
+            String sql = "update employees set reimbursement = ? where id = ?;";
 
             PreparedStatement ps = conn.prepareStatement(sql);
 
             ps.setBigDecimal(1, employee.getReimbursement());
             ps.setInt(2, employee.getId());
+            System.out.println(ps);
 
             ps.executeUpdate();
 
@@ -116,4 +117,6 @@ public class EmployeeRepo implements CrudInterface<Employee>{
     public void delete(Integer id) {
 
     }
+
+
 }

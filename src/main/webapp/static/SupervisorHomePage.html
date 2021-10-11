@@ -21,14 +21,92 @@
                 <section id="email"></section>
             </div>
             <br><br>
-            <label for="manage-applications" method="GET">Manage pending applications.
-                <input type="submit" class="manappsbtn" onclick="manapps()" value="Manage applications">
+            <label for="manage-applications" method="GET">View pending applications.
+                <input type="submit" class="manappsbtn" onclick="selectquery()" value="View applications">
             </label>
+            <div>
+                <section id="apps">
+                    
+                </section>
+            </div>
+            <div>
+                <h3>Update an Application.</h3><br>
+                <label for="applicationid">Application Id:
+                    <input id="applicationid" type="text" name="applicationid" autocomplete="off" required>
+                </label>
+                <br>
+                <label for="employeeid">Employee Id:
+                    <input id="employeeid" type="text" name="employeeid" autocomplete="off" required>
+                </label>
+                <br>
+                <label for="acceptreject">Accept or Reject the application:<br>
+                    <input id="acceptreject" type="radio" name="acceptreject" value="Accept" autocomplete="off" required>Accept<br>
+                    <input id="acceptreject" type="radio" name="acceptreject" value="Reject" autocomplete="off" required>Reject<br>
+                </label>
+                <label for="comment">Comment<br>
+                    <textarea id="comment" name="comment" rows="6" cols="10" autocomplete="off" required></textarea>
+                </label>
+                <br>
+                For Benco Use only!<br>
+                <label for="passedfailed">Passed or Failed:<br>
+                    <input id="passedfailed" type="radio" name="passedfailed" value="Passed" autocomplete="off">Passed<br>
+                    <input id="passedfailed" type="radio" name="passedfailed" value="Failed" autocomplete="off">Failed<br>
+                </label>
+                <label for="payed">
+                    <input id="payed" type="checkbox" name="payed" value="payed" autocomplete="off" required>Payed<br>
+                </label>
+                <br>
+                <input type="submit" class="manappsbtn" onclick="selectupdate()" value="Update Application">
+
+            </div>
             <br>
             <button onclick="document.location='index.html'">logout</button>
     </div>
 
-
+    
     <script src="js/supprof.js"></script>
+
+    <script>
+        function selectquery() {
+            let supprof = JSON.parse(document.cookie);
+
+            if (supprof.position == "Benefits Coordinator"){
+                console.log("selecting benco");
+                bencoquery();
+            } else if (supprof.position == "Head"){
+                console.log("selecting depthead");
+                deptheadquery();
+            } else if (supprof.position == "Supervisor"){
+                console.log("selecting directsuper");
+                directsuperquery();
+            }
+
+        }
+
+        function selectupdate() {
+            let supprof = JSON.parse(document.cookie);
+
+            if (supprof.position == "Benefits Coordinator"){
+                console.log("selecting bencoupdate");
+                bencoupdate();
+            } else if (supprof.position == "Head"){
+                console.log("selecting deptheadupdate");
+                deptheadupdate();
+            } else if (supprof.position == "Supervisor"){
+                console.log("selecting directsuperupdate");
+                directsuperupdate();
+            }
+
+        }
+
+
+        
+    </script> 
+    <script src="js/bencoquery.js"></script>
+    <script src="js/directsuperquery.js"></script>
+    <script src="js/deptheadquery.js"></script>
+    <script src="js/bencoupdate.js"></script>
+    <script src="js/deptheadupdate.js"></script>
+    <script src="js/directsuperupdate.js"></script>
 </body>
 </html>
