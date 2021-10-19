@@ -8,8 +8,6 @@ The Tuition Reimbursement Management System (TRMS) project was to create a Tuiti
 
 * Maven 4.0.0
 * PostGreSQL 42.2.22
-* Log4J 2.14.1
-* Junit 4.11
 * Servlet Api 4.0.1
 * Jackson Databind 2.9.3
 * Tomcat 9.0.50
