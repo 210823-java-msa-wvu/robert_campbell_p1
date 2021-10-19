@@ -16,13 +16,13 @@ The Tuition Reimbursement Management System (TRMS) project was to create a Tuiti
 
 * Login homepages for both Employees and Supervisors/Benco
   * Supervisor/Benco Homepage
-   * View Profile
-   * View pending Applications
-   * Approve or Reject Pending Applications and give reason why
+    * View Profile
+    * View pending Applications
+    * Approve or Reject Pending Applications and give reason why
   * Employee Hompage
-   * View Profile
-   * View Pending Applications for the Employee
-   * Apply for application
+    * View Profile
+    * View Pending Applications for the Employee
+    * Apply for application
 * Application for Reimbursements
   * Takes in the Employee's Full Name
   * Event Date
